@@ -7,12 +7,24 @@
     <title>Ejmeplo API JS</title>
     <script src="../js/consumirapipaises.js"></script>
     <script src="../js/utilidades.js"></script>
+
+    <script>
+        function llamarMostrarPais(){
+            var selectPaises = document.getElementById("SelectPaises")
+            mostrarDatosPaisSeleccionado(selectPaises.value)
+        }
+    </script>
+    
 </head>
 
 <body>
     <h1>Paises</h1>
 
-    <table id="tablaPaises">
+   
+
+    <Button onclick="poblarDatosPaises()">Poblar Datos Paises</Button>
+    <select onchange="llamarMostrarPais()" id="SelectPaises"></select>
+     <table id="tablaPaises">
         <tr>
             <th>Nombre Oficial</th>
             <th>Capital</th>
@@ -20,9 +32,6 @@
         </tr>
     </table>
 
-    <script>
-        poblarDatosPaises()
-    </script>
 </body>
 
 </html>
